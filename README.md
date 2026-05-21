@@ -1,2 +1,46 @@
-# escanerdefrecuencias
-Escaner de frecuencias simple en python
+# Escaner de frecuencias
+
+Herramienta de análisis de audio que detecta frecuencias dominantes usando la Transformada de Fourier y las registra en una base de datos CSV.
+
+## ¿Qué hace?
+
+Escuchando el audio del microfono, el programa:
+
+1. Aplica una ventana de Hann a la señal para reducir el spectral leakage
+2. Calcula la transformada de Fourier para obtener el espectro de frecuencias
+3. Detecta los picos dominantes usando prominencia mínima configurable
+4. Convierte cada frecuencia a su nota musical más cercana, incluyendo los cents de desafinación
+5. Guarda los resultados en un CSV con su timestamp
+6. Genera visualizaciones: forma de onda, espectro FFT y espectrograma
+
+## Dependencias
+ 
+| Librería | Uso |
+|---|---|
+| `numpy` | FFT, operaciones sobre arrays |
+| `scipy` | Detección de picos (`find_peaks`), ventanas (`hann`), espectrograma |
+| `matplotlib` | Visualizaciones y animación en tiempo real |
+| `pandas` | Resumen estadístico del CSV |
+| `sounddevice` | Captura de audio desde el micrófono |
+
+## Instalación
+ 
+```bash
+pip install numpy scipy matplotlib pandas sounddevice
+```
+
+## Uso
+
+```bash
+# usar el micrófono por defecto
+python escaner-frecuencias.py
+ 
+# ver qué micrófonos están disponibles
+python escaner-frecuencias.py --list-devices
+ 
+# usar un micrófono específico (usar el número del comando anterior)
+python escaner-frecuencias.py --device 2
+ 
+# grabar durante x segundos y parar
+python escaner-frecuencias.py --duration (cantidad de segundos)
+```
