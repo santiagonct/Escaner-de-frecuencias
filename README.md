@@ -15,13 +15,13 @@ Escuchando el audio del microfono, el programa:
 
 ## Dependencias
  
-| Librería | Uso |
-|---|---|
-| `numpy` | FFT, operaciones sobre arrays |
-| `scipy` | Detección de picos (`find_peaks`), ventanas (`hann`), espectrograma |
-| `matplotlib` | Visualizaciones y animación en tiempo real |
-| `pandas` | Resumen estadístico del CSV |
-| `sounddevice` | Captura de audio desde el micrófono |
+| Librería | 
+|---|
+| `numpy` |
+| `scipy` | 
+| `matplotlib` |
+| `pandas` |
+| `sounddevice` |
 
 ## Instalación
  
