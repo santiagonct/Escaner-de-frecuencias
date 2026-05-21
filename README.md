@@ -6,7 +6,7 @@ Herramienta de análisis de audio que detecta frecuencias dominantes usando la T
 
 Escuchando el audio del microfono, el programa:
 
-1. Aplica una ventana de Hann a la señal para reducir el spectral leakage
+1. Aplica una ventana de Hann a la señal para reducir la fuga espectral
 2. Calcula la transformada de Fourier para obtener el espectro de frecuencias
 3. Detecta los picos dominantes usando prominencia mínima configurable
 4. Convierte cada frecuencia a su nota musical más cercana, incluyendo los cents de desafinación
